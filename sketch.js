@@ -1,4 +1,4 @@
-// Basic knowledge
+/* // Basic knowledge
 let names = ["Mark", "Dave", "Maria"];
 console.log(names);
 
@@ -54,7 +54,38 @@ console.log("// Removed " +names[0]);
 names.shift();
 
 vips = names.slice(0, 2);
-console.log("The VIPs are " +vips);
+console.log("The VIPs are " +vips); */
+
+// Exercise:
+
+let basket = ["apple", "banana", "orange", "pear"];
+
+console.log(basket[0]);
+
+let bananaLoc = basket.indexOf("banana");
+console.log("banana is at the index " +bananaLoc);
+basket.splice(bananaLoc, bananaLoc, "kiwi");
+
+basket.pop();
+basket.unshift("mango");
+
+for (let i = 0; i < basket.length; i++) {
+	console.log(`Fruit ${i+1}: ` +basket[i]);
+}
+
+let orangeLoc = basket.indexOf("orange")
+if (basket.indexOf("orange") == -1) {
+	console.log("Orange not found")
+}
+else {
+	console.log("Orange found at index "+orangeLoc);
+}
+
+let basketM = Math.floor(basket.length / 2);
+let citrus = basket.slice((basketM - 1), (basketM + 1));
+console.log(citrus);
+
+//
 
 function setup() {
 	createCanvas(500, 500);
